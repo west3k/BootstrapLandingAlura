@@ -17,22 +17,26 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid ">
-        <a class="navbar-brand fonte-titulo cor-especial" href="#">fruta & fruto</a>
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+
+        <a class="navbar-brand fonte-titulo cor-especial" href="#">fruta&fruto</a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+
           <ul class="navbar-nav">
             <li><a class="nav-link" aria-current="page" href="#">início</a></li>
             <li><a class="nav-link" href="#">receitas</a></li>
             <li><a class="nav-link" href="#">quem somos</a></li>
-            <li><a class="nav-link" href="#">contato</a></li>
+            <li><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-contato">contato</a></li>
           </ul>
+
         </div>
-      </div>
+
     </nav>
   </header>
 
@@ -83,7 +87,7 @@
 
     <section id="receitas" class="containe-fluid bg-light">
 
-      <div class="row justify-content-center">
+      <div class="row justify-content-center receitas-largura">
 
         <article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4">
           <img src="src/img/receita-abacate.jpg" class="card-img-top card-posicao-imagem"
@@ -142,7 +146,7 @@
             <h5 class="card-title">Beterrabas assadas</h5>
             <p class="card-text">Receita refrescante e cheia de vitaminas para o seu café da manhã!</p>
             <a href="#" class="btn botao-cor-especial">Veja a receita</a>
-          
+
           </div>
         </article>
 
@@ -151,7 +155,52 @@
 
   </main>
 
-  <p>contato:<a href="mailto:email@frutafruto.com.br">email@frutafruto.com.br</a></p>
+  <footer class="bg-secondary p-3 containe-fluid w-100">
+
+    <p class="text-light m-0 text-center">contato: <a class="text-light link-style-none" href="mailto:email@frutafruto.com.br">email@frutafruto.com.br</a></p>
+
+  </footer>
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal-contato" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <dialog class="modal-content">
+        <header class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Entre em Contato</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </header>
+
+        <main class="modal-body">
+
+          <form>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Nome Completo</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira seu nome completo">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="form-label">Endereço de e-mail</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="nome@exemplo.com">
+            </div>
+            <div class="form-group">
+              <label for="exempleFormControlTextarea1" class="form-label">Deixe seu comentário</label>
+              <textarea class="form-control" placeholder="Insira aqui seu comentário" id="floatingTextarea2"
+                style="height: 100px"></textarea>
+            </div>
+          </form>
+
+        </main>
+
+        <footer class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn botao-cor-especial">Enviar</button>
+        </footer>
+
+      </dialog>
+    </div>
+  </div>
+
 
   <script src=""></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

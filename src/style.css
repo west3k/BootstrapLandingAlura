@@ -35,3 +35,11 @@
 .card-largura{
   max-width: 18rem;
 }
+
+.link-style-none{
+  text-decoration: none;
+}
+
+.receitas-largura{
+  max-width: 100%;
+}
